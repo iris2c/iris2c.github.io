@@ -5,10 +5,10 @@
 .publication-category {
   font-size: 18px;
   font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 16px;
   color: var(--text-color);
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   border-bottom: 2px solid var(--border-color);
   letter-spacing: -0.01em;
 }

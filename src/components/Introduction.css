@@ -1,5 +1,5 @@
 .introduction {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: var(--section-spacing);
   text-align: center;
 }
@@ -52,7 +52,7 @@
 }
 
 .education-section {
-  margin: 60px auto 40px;
+  margin: 40px auto 30px;
   max-width: 680px;
   text-align: left;
 }
@@ -219,7 +219,7 @@
   }
 
   .education-section {
-    margin: 40px auto 30px;
+    margin: 30px auto 20px;
     padding: 0 10px;
   }
 

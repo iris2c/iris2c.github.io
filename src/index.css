@@ -12,7 +12,7 @@
   --accent-hover: #0051a2;
   --border-color: #d2d2d7;
   --border-hover: #a1a1a6;
-  --section-spacing: 120px;
+  --section-spacing: 80px;
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
   --transition-fast: 0.15s ease;
@@ -78,7 +78,7 @@ html {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--text-color);
   position: relative;
@@ -101,7 +101,7 @@ html {
 /* 移动端优化 */
 @media (max-width: 768px) {
   :root {
-    --section-spacing: 80px;
+    --section-spacing: 60px;
   }
 
   body {
@@ -114,7 +114,7 @@ html {
 
   .section-title {
     font-size: 20px;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
   }
 
   .section-title::after {
@@ -126,7 +126,7 @@ html {
 /* 小屏幕手机优化 */
 @media (max-width: 480px) {
   :root {
-    --section-spacing: 60px;
+    --section-spacing: 50px;
   }
 
   body {
@@ -135,7 +135,7 @@ html {
 
   .section-title {
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
