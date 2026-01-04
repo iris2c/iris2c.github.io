@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1d1d1f;
+  --text-secondary: #86868b;
+  --accent-color: #0071e3;
+  --accent-hover: #0051a2;
+  --border-color: #d2d2d7;
+  --border-hover: #a1a1a6;
+  --section-spacing: 120px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  /* 移动端优化 */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* 确保所有文本默认都是可见的 */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, li {
+  color: var(--text-color);
+}
+
+/* 确保根元素有内容 */
+#root {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding-bottom: var(--section-spacing);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.section-content {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  :root {
+    --section-spacing: 80px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .section-content {
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+
+  .section-title::after {
+    width: 50px;
+    height: 2px;
+  }
+}
+
+/* 小屏幕手机优化 */
+@media (max-width: 480px) {
+  :root {
+    --section-spacing: 60px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  /* 增大触摸目标 */
+  button, a, .link-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+

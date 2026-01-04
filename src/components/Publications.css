@@ -1,0 +1,129 @@
+.publications {
+  padding-bottom: var(--section-spacing);
+}
+
+.publication-category {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  letter-spacing: -0.01em;
+}
+
+.publication-category:first-of-type {
+  margin-top: 0;
+}
+
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.publication-item {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  cursor: default;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.publication-item:hover {
+  padding-left: 30px;
+  border-left: 3px solid var(--accent-color);
+  background: rgba(0, 113, 227, 0.02);
+  border-radius: 0 8px 8px 0;
+  transform: translateX(4px);
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+  padding-bottom: 20px;
+}
+
+.publication-year {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  min-width: 60px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.publication-content {
+  flex: 1;
+}
+
+.publication-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.publication-title a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.publication-title a:hover {
+  color: var(--accent-color);
+  transform: translateX(2px);
+}
+
+.publication-authors {
+  font-size: 12px;
+  color: var(--text-color);
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+.publication-venue {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .publication-category {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+
+  .publication-item {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    padding-bottom: 20px;
+  }
+
+  .publication-item:hover {
+    padding-left: 16px;
+    border-left: 3px solid var(--accent-color);
+    transform: none;
+  }
+
+  .publication-year {
+    min-width: auto;
+    font-size: 12px;
+  }
+
+  .publication-title {
+    font-size: 15px;
+  }
+
+  .publication-authors,
+  .publication-venue {
+    font-size: 12px;
+  }
+}
+
