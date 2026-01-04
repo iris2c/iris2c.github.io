@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../translations'
+import logoImage from '../assets/logo.png'
 import './Navigation.css'
 
 function Navigation() {
@@ -27,7 +28,7 @@ function Navigation() {
     <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('introduction')}>
-          Homepage
+          <img src={logoImage} alt="Homepage" className="logo-image" />
         </div>
         <div className="nav-right">
           <div className="nav-links">
