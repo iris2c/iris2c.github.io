@@ -5,30 +5,26 @@
 }
 
 .hero-title {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
   margin-bottom: 12px;
   color: var(--text-color);
-  background: linear-gradient(135deg, var(--text-color) 0%, var(--text-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-name {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 300;
   letter-spacing: -0.005em;
   margin-bottom: 12px;
   color: var(--text-color);
 }
 
 .hero-subtitle {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 300;
   color: var(--text-secondary);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   letter-spacing: -0.01em;
 }
 
@@ -53,7 +49,7 @@
 
 .education-section {
   margin: 40px auto 30px;
-  max-width: 680px;
+  max-width: 600px;
   text-align: left;
 }
 
@@ -61,7 +57,7 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   color: var(--text-color);
   position: relative;
@@ -84,19 +80,19 @@
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .education-item {
   display: flex;
-  gap: 30px;
-  padding: 20px;
-  padding-bottom: 30px;
+  gap: 20px;
+  padding: 16px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   transition: all var(--transition-normal);
   cursor: default;
   border-radius: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .education-item:hover {
@@ -128,13 +124,14 @@
   font-size: 17px;
   font-weight: 500;
   color: var(--text-color);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  line-height: 1.4;
 }
 
 .education-supervisors {
   font-size: 15px;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .link-button {
@@ -197,7 +194,7 @@
 
   .hero-title,
   .hero-name {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero-subtitle {
@@ -225,9 +222,9 @@
 
   .education-item {
     flex-direction: column;
-    gap: 12px;
-    padding: 16px;
-    padding-bottom: 20px;
+    gap: 8px;
+    padding: 12px;
+    padding-bottom: 16px;
   }
 
   .education-item:hover {
