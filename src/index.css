@@ -1,0 +1,60 @@
+:root {
+  color-scheme: light;
+  --paper: #fafbff;
+  --ink: #242641;
+  --muted: #555d75;
+  --line: #d8dcea;
+  --accent: #51499a;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'Baskerville', Georgia, 'Songti SC', 'Noto Serif CJK SC', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --header-offset: 5.7rem;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; min-width: 0; line-height: 1.6; }
+h1, h2, h3, p, figure { margin: 0; }
+button, summary { font: inherit; }
+a { color: inherit; }
+button { color: inherit; cursor: pointer; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+::selection { background: #d5d6fb; color: #22213e; }
+html { scroll-padding-top: var(--header-offset); }
+.shell { width: min(74rem, calc(100% - 8rem)); margin-inline: auto; }
+.kicker {
+  font-family: var(--mono);
+  font-size: .775rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.kicker { display: flex; align-items: center; gap: .7rem; color: var(--accent); }
+.display-heading {
+  font: 400 clamp(2.65rem, 4.4vw, 3.9rem)/1.06 var(--serif);
+  letter-spacing: -.05em;
+}
+:lang(zh-CN) .display-heading, :lang(zh-CN) .profile h1 { letter-spacing: -.02em; }
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  inset: .75rem auto auto .75rem;
+  transform: translateY(-200%);
+  background: var(--ink);
+  color: white;
+  padding: .55rem 1rem;
+}
+.skip-link:focus { transform: none; }
+#main:focus { outline: none; }
+@media (max-width: 900px) { .shell { width: calc(100% - 4rem); } }
+@media (max-width: 680px) {
+  :root { --header-offset: 7.6rem; }
+  .shell { width: calc(100% - 2.5rem); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

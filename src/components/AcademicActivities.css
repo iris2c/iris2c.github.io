@@ -1,0 +1,71 @@
+.academic-background {
+  padding-block: clamp(3.2rem, 7vw, 6.5rem) clamp(2rem, 4.5vw, 4.5rem);
+  border-block-start: 1px solid var(--line);
+}
+
+.academic-background h2 {
+  margin: 0 0 clamp(1.8rem, 4vw, 3rem);
+  font: 400 clamp(2.35rem, 4vw, 3.8rem)/1.06 var(--serif);
+  color: var(--ink);
+  letter-spacing: -.045em;
+}
+
+.background-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 7vw, 7rem);
+}
+
+.background-columns h3 {
+  margin: 0 0 .85rem;
+}
+
+.degree-list, .service-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.degree-list li, .service-list > div {
+  border-block-start: 1px solid var(--line);
+  padding: 1rem 0;
+}
+
+.degree-list li {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: baseline;
+  gap: clamp(1.2rem, 4vw, 3rem);
+}
+
+.degree-years {
+  color: var(--muted);
+  font: 400 .78rem/1.4 var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.degree-name, .service-list dt {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.school-name, .service-list dd, .degree-supervisors {
+  margin: .26rem 0 0;
+  color: var(--muted);
+  font-size: .93rem;
+  line-height: 1.55;
+}
+
+.degree-supervisors { margin-top: .6rem; }
+.degree-supervisors dt { font-weight: 600; }
+.degree-supervisors dd { margin: 0; }
+
+@media (max-width: 680px) {
+  .background-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
